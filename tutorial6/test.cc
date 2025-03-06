@@ -14,11 +14,11 @@ class TestComponent: public Component{
         TestComponent(int x, int y, int width, int height, const string& id): Component(x, y, width, height, id){};
         TestComponent(const Rectangle& rect, const string& id): Component(rect, id){};
         void draw(Display *display, Window win, GC gc, const Rectangle& box){
-            cout<<"Drawing TestComponent: "<<id<<endl;
+            cout<<"Drawing TestComponent: "<<getId()<<endl;
         }
 
         void print() const{
-            cout<<"TestComponent: "<<id<<endl;
+            cout<<"TestComponent: "<<getId()<<endl;
         }
 };
 
@@ -217,6 +217,7 @@ int testRemoveIndex(){
     while(list->getSize() > 0){
         list->remove(0);
     }
+
 
     cout<<"Adding back"<<endl;
     list->add(panel0);

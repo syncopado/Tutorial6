@@ -1,7 +1,7 @@
 all: test
 	
-test: test.o Component.o ComponentList.o Tester.o
-	g++ -o test -std=c++11  test.o Component.o ComponentList.o Tester.o -lX11 -L /opt/X11/lib
+test: test.o Component.o ComponentList.o Tester.o Node.o
+	g++ -o test -std=c++11  test.o Component.o ComponentList.o Tester.o Node.o -lX11 -L /opt/X11/lib
 
 test.o:	test.cc 
 	g++ -c test.cc -I /opt/X11/include
@@ -14,6 +14,9 @@ ComponentList.o:	ComponentList.h ComponentList.cc
 
 Tester.o:	Tester.h Tester.cc
 	g++ -c Tester.cc
+
+Node.o:	Node.h Node.cc
+	g++ -c Node.cc
 	
 clean:
 	rm -f test *.o

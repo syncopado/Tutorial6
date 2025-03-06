@@ -1,0 +1,99 @@
+
+***************************************************************************
+* Compilation
+***************************************************************************
+Executing: make clean
+Executing: make all
+Executing: ./test
+Which test would you like to run?
+  (0) Test add back.
+  (1) Test add at index
+  (2) Test remove index
+  (3) Test remove id
+Enter the number of the test you would like to run: Testing add at back
+
+Component: TestComponent 1
+Component: TestComponent 4
+Component: TestComponent 3
+Component: TestComponent 2
+Component: TestComponent 5
+Component: TestComponent 0
+Correct Components found in order
+Test add back passed
+
+
+Test passed
+Executing: ./test
+Which test would you like to run?
+  (0) Test add back.
+  (1) Test add at index
+  (2) Test remove index
+  (3) Test remove id
+Enter the number of the test you would like to run: Testing add at back
+
+Component: TestComponent 5
+Component: TestComponent 2
+Component: TestComponent 3
+Component: TestComponent 0
+Component: TestComponent 1
+Component: TestComponent 4
+Correct Components found in correct order
+Test add back passed
+
+
+Test passed
+Executing: ./test
+Which test would you like to run?
+  (0) Test add back.
+  (1) Test add at index
+  (2) Test remove index
+  (3) Test remove id
+Enter the number of the test you would like to run: Testing remove at index
+
+Component: TestComponent 1
+Component: TestComponent 2
+Component: TestComponent 4
+Correct Components found in order
+Correct Components removed
+Removing invalid index
+Testing remove all
+Adding back
+Component: TestComponent 0
+Component: TestComponent 1
+Component: TestComponent 2
+Correct Components found in order
+Test remove index passed
+
+
+Test passed
+Executing: ./test
+Which test would you like to run?
+  (0) Test add back.
+  (1) Test add at index
+  (2) Test remove index
+  (3) Test remove id
+Enter the number of the test you would like to run: Testing remove by id
+
+Component: TestComponent 1
+Component: TestComponent 3
+Component: TestComponent 5
+Correct Components found in order
+Correct Components removed
+Removing invalid id
+Testing remove all
+Adding back
+Testing get by id
+Component: TestComponent 0
+Component: TestComponent 1
+Component: TestComponent 2
+Correct Components found in order
+Test remove index passed
+
+
+Test passed
+
+
+***************************************************************************
+* Mark: 8/8
+***************************************************************************
+
