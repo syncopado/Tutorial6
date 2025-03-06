@@ -7,7 +7,7 @@ using namespace std;
 
 class Component {
     public:
-        // Constructors
+        // Constructors & Destructor
         Component(const Rectangle& properties, const string& id);
         Component(int x, int y, int width, int height, const string& id);
         virtual ~Component();
