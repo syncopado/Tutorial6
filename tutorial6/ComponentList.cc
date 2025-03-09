@@ -6,9 +6,25 @@ ComponentList::ComponentList(): head(nullptr), tail(nullptr), size(0){
 
 // Destructor
 ComponentList::~ComponentList(){
-    while (size > 0){
-        remove(0);
+    // while (size > 0){
+    //     remove(0);
+    // }
+    Node* current = head;
+
+    while (current != nullptr) {
+        Node* nextNode = current->getNext();
+        current->setNext(nullptr);  // Disconnect the node (avoid dangling pointers)
+        current->setPrev(nullptr);  
+        delete current->getData(); // Delete the component
+        delete current; // Delete the node
+        current = nextNode;
     }
+
+    head = nullptr;
+    tail = nullptr;
+    size = 0;
+
+    cout << "ComponentList destructor called~" << endl;
 }
 
 // Getters
